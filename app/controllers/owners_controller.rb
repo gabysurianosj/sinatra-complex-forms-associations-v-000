@@ -32,10 +32,10 @@ class OwnersController < ApplicationController
   post '/owners/:id' do
   #binding.pry
   @owner = Owner.find(params[:id])
-
+  
   if !params[:owner].keys.include?("pet_ids")
-   params[:owner]["pet_ids"] = []
-   end
+      params[:owner]["pet_ids"] = []
+  end
 
    @owner.update(params["owner"])
 
