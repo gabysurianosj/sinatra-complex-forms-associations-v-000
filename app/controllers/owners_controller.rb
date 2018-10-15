@@ -24,7 +24,7 @@ class OwnersController < ApplicationController
     erb :'/owners/show'
   end
 
-  patch '/owners/:id' do 
+  patch '/owners/:id/edit' do 
     post '/owners/:id' do
    	# binding.pry
   @owner = Owner.find(params[:id])
